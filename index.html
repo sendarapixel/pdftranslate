@@ -1,113 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-      <meta charset="UTF-8">
-	      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		      <title>Traductor de PDF</title>
-			      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css">
-				    </head>
-					  <body>
-					      <div class="container my-5">
-						        <div class="row justify-content-center">
-								        <div class="col-lg-8">
-										          <h1 class="text-center mb-4">Traductor de PDF</h1>
-
-												            <form id="pdf-form" enctype="multipart/form-data">
-															            <div class="mb-3">
-																		              <label for="pdf-file" class="form-label">Selecciona un archivo PDF:</label>
-																					                <input type="file" id="pdf-file" name="pdf-file" accept="application/pdf" class="form-control">
-																									            </div>
-
-																												            <div class="mb-3">
-																															              <label for="language-select" class="form-label">Selecciona el idioma de origen:</label>
-																																		                <select id="language-select" class="form-select">
-																																						                <option value="en">Inglés</option>
-																																										                <option value="es">Español</option>
-																																														                <option value="fr">Francés</option>
-																																																		              </select>
-																																																					              </div>
-
-																																																								              <button type="submit" class="btn btn-primary mb-3">Traducir</button>
-																																																											            </form>
-
-																																																														          <div class="progress mb-3" style="display: none;">
-																																																																              <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-																																																																			            </div>
-
-																																																																						          <a id="download-link" href="#" class="btn btn-success mb-3" style="display: none;">Descargar archivo traducido</a>
-
-																																																																								            <div id="alert-container"></div>
-																																																																											        </div>
-																																																																													      </div>
-																																																																														      </div>
-
-																																																																															      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.3/pdf.min.js"></script>
-																																																																																      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
-																																																																																	      <script src="https://cdn.jsdelivr.net/npm/nlp-compromise"></script>
-																																																																																		      <script src="https://unpkg.com/@nlpjs/stopwords@2.2.0/lang/es.json"></script>
-																																																																																			      <script src="https://unpkg.com/@nlpjs/lang-es@2.3.0/data.json"></script>
-																																																																																				      <script src="https://cdn.jsdelivr.net/npm/@nlpjs/chatbot@1.6.0/dist/chatbot.min.js"></script>
-																																																																																					      <script src="js/main.js"></script>
-																																																																																						    </body>
-																																																																																							</html>
-																																																																																																																																																																													    </body>
-																																																																																							</html>
-																																																																																						    </body>
-																																																																																							</html>
-																																																																																							<!DOCTYPE html>
-																																																																																							<html lang="es">
-																																																																																							  <head>
-																																																																																							      <meta charset="UTF-8">
-																																																																																								      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-																																																																																									      <title>Traductor de PDF</title>
-																																																																																										      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css">
-																																																																																											    </head>
-																																																																																												  <body>
-																																																																																												      <div class="container my-5">
-																																																																																													        <div class="row justify-content-center">
-																																																																																															        <div class="col-lg-8">
-																																																																																																	          <h1 class="text-center mb-4">Traductor de PDF</h1>
-
-																																																																																																			            <form id="pdf-form" enctype="multipart/form-data">
-																																																																																																						            <div class="mb-3">
-																																																																																																									              <label for="pdf-file" class="form-label">Selecciona un archivo PDF:</label>
-																																																																																																												                <input type="file" id="pdf-file" name="pdf-file" accept="application/pdf" class="form-control">
-																																																																																																																            </div>
-
-																																																																																																																			            <div class="mb-3">
-																																																																																																																						              <label for="language-select" class="form-label">Selecciona el idioma de origen:</label>
-																																																																																																																									                <select id="language-select" class="form-select">
-																																																																																																																													                <option value="en">Inglés</option>
-																																																																																																																																	                <option value="es">Español</option>
-																																																																																																																																					                <option value="fr">Francés</option>
-																																																																																																																																									              </select>
-																																																																																																																																												              </div>
-
-																																																																																																																																															              <button type="submit" class="btn btn-primary mb-3">Traducir</button>
-																																																																																																																																																		            </form>
-
-																																																																																																																																																					          <div class="progress mb-3" style="display: none;">
-																																																																																																																																																							              <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-																																																																																																																																																										            </div>
-
-																																																																																																																																																													          <a id="download-link" href="#" class="btn btn-success mb-3" style="display: none;">Descargar archivo traducido</a>
-
-																																																																																																																																																															            <div id="alert-container"></div>
-																																																																																																																																																																		        </div>
-																																																																																																																																																																				      </div>
-																																																																																																																																																																					      </div>
-
-																																																																																																																																																																						      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.3/pdf.min.js"></script>
-																																																																																																																																																																							      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
-																																																																																																																																																																								      <script src="https://cdn.jsdelivr.net/npm/nlp-compromise"></script>
-																																																																																																																																																																									      <script src="https://unpkg.com/@nlpjs/stopwords@2.2.0/lang/es.json"></script>
-																																																																																																																																																																										      <script src="https://unpkg.com/@nlpjs/lang-es@2.3.0/data.json"></script>
-																																																																																																																																																																											      <script src="https://cdn.jsdelivr.net/npm/@nlpjs/chatbot@1.6.0/dist/chatbot.min.js"></script>
-																																																																																																																																																																												      <script src="js/main.js"></script>
-																																																																																																																																																																													    </body>
-																																																																																																																																																																														</html>
-																																																																																																																																																																																																																																																																																																																		    </body>
-																																																																																																																																																																														</html>
-																																																																																																																																				    </body>
-																																																																																																																																																																														</html>
-																																																																																																																																																																														
+<html>
+<head>
+	<title>Traducción de archivo PDF</title>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+							<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+								<script src="config.js"></script>
+									<script src="main.js"></script>
+									</head>
+									<body>
+										<div class="container">
+												<h1 class="text-center mt-5 mb-4">Traducción de archivo PDF</h1>
+														<div class="row justify-content-center">
+																	<div class="col-md-6">
+																					<label for="idioma">Selecciona el idioma:</label>
+																									<select id="idioma" class="form-control mb-3">
+																														<option value="en">Inglés</option>
+																																			<option value="es">Español</option>
+																																								<option value="fr">Francés</option>
+																																												</select>
+																																															</div>
+																																																	</div>
+																																																			<div class="row justify-content-center">
+																																																						<div class="col-md-6">
+																																																										<label for="archivo">Selecciona un archivo PDF:</label>
+																																																														<input type="file" id="archivo" class="form-control-file mb-3">
+																																																																	</div>
+																																																																			</div>
+																																																																					<div class="row justify-content-center">
+																																																																								<div class="col-md-6">
+																																																																												<button id="traducir" class="btn btn-primary mb-3">Traducir</button>
+																																																																															</div>
+																																																																																	</div>
+																																																																																			<div class="row justify-content-center">
+																																																																																						<div class="col-md-6">
+																																																																																										<div class="progress mb-3">
+																																																																																															<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+																																																																																																			</div>
+																																																																																																						</div>
+																																																																																																								</div>
+																																																																																																										<div class="row justify-content-center">
+																																																																																																													<div class="col-md-6">
+																																																																																																																	<a id="descargar" download="traduccion.pdf"><button id="botonDescargar" class="btn btn-primary mb-3" disabled>Descargar</button></a>
+																																																																																																																				</div>
+																																																																																																																						</div>
+																																																																																																																							</div>
+																																																																																																																							</body>
+																																																																																																																							</html>
+																																																																																																																																																																																																																																														</body>
+																																																																																																																							</html>
+																																																																																																																							</body>
+																																																																																																																							</html>
+																																																																																																																							
