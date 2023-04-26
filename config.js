@@ -1,5 +1,5 @@
 const config = {
-    	apiKey: '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',
+    	apiKey: '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',
         	modelId: 'ChatGPT-es-2022-04-25',
             };
 
